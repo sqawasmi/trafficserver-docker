@@ -21,9 +21,10 @@ RUN cd /downloads && tar xvf trafficserver-4.2.1.tar.bz2
 RUN cd /downloads/trafficserver-4.2.1/ && ./configure --prefix=/opt/trafficserver
 RUN cd /downloads/trafficserver-4.2.1/ && make
 RUN cd /downloads/trafficserver-4.2.1/ && make install
+RUN rm -rf /opt/trafficserver/etc/trafficserver
 ADD ./files/etc/trafficserver /etc/trafficserver
 RUN ln -sf /etc/trafficserver /opt/trafficserver/etc/trafficserver
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["/opt/trafficserver/bin/traffic_server"]
