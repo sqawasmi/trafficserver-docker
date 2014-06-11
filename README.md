@@ -13,7 +13,7 @@ Built images are uploaded to [index.docker.io][1]
 
  - Install Docker: [http://docs.docker.io/][2]
  - Execute
- `docker run -d --name TrafficServer -p 8080:80 shaker/readthedocs`
+ `docker run -d --name TrafficServer -p 8080:80 shaker/trafficserver`
  - Browse [http://&lt;your server ip address&gt;:8080/][3]
  - Stop and start again
    - `docker stop TrafficServer`
