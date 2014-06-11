@@ -1,4 +1,4 @@
-Docker build for Apache TrafficServer
+Docker build for Apache TrafficServer (ATS)
 ================================
 
 This repository provides Dockerfile for [Apache TrafficServer][0] 
