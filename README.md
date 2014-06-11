@@ -4,8 +4,8 @@ Docker build for Apache TrafficServer
 This repository provides Dockerfile for [Apache TrafficServer][0] 
 
 ### Status
-Debian: wheezy
-TrafficServer: 4.2.1
+- Debian: wheezy
+- TrafficServer: 4.2.1
 
 Built images are uploaded to [index.docker.io][1]
 
