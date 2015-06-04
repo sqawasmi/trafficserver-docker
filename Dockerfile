@@ -16,15 +16,16 @@ RUN export LANGUAGE=en_US.UTF-8 && \
 
 # Install TrafficServer
 RUN mkdir -p /downloads/trafficserver
-RUN wget http://download.nextag.com/apache/trafficserver/trafficserver-5.1.0.tar.bz2 -O /downloads/trafficserver.tar.bz2
+RUN wget http://download.nextag.com/apache/trafficserver/trafficserver-5.3.0.tar.bz2 -O /downloads/trafficserver.tar.bz2
 RUN cd /downloads && tar xvf trafficserver.tar.bz2 -C /downloads/trafficserver --strip-components 1
 RUN cd /downloads/trafficserver && ./configure --prefix=/opt/trafficserver
 RUN cd /downloads/trafficserver && make
 RUN cd /downloads/trafficserver && make install
-RUN rm -rf /opt/trafficserver/etc/trafficserver
-ADD ./files/etc/trafficserver /etc/trafficserver
+#RUN rm -rf /opt/trafficserver/etc/trafficserver
+#ADD ./files/etc/trafficserver /etc/trafficserver
+RUN mv /opt/trafficserver/etc/trafficserver /etc/trafficserver
 RUN ln -sf /etc/trafficserver /opt/trafficserver/etc/trafficserver
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["/opt/trafficserver/bin/traffic_server"]
