@@ -5,7 +5,7 @@ This repository provides Dockerfile for [Apache TrafficServer][0]
 
 ### Status
 - Debian: wheezy
-- TrafficServer: 5.0.1
+- TrafficServer: 5.3.0
 
 Built images are uploaded to [index.docker.io][1]
 
@@ -21,11 +21,11 @@ Built images are uploaded to [index.docker.io][1]
 
 ### Configuration:
 
-This build comes with the standard configuration as provided by TrafficServer, the only change is to run TrafficServer on port 80 by default instead of 8080, configuration are under the following path: `/etc/trafficserver`
+This build comes with the standard configuration as provided by TrafficServer, configuration are under the following path: `/etc/trafficserver`
 
 You can use docker volumes mount feature to run TrafficServer with your specific configuration, for example:
 
-`docker run -d --name TrafficServer -p 8080:80 /MY-CONFIGS/trafficserver/:/etc/trafficserver/ shaker/trafficserver`
+`docker run -d --name TrafficServer -p 8080:8080 /MY-CONFIGS/trafficserver/:/etc/trafficserver/ shaker/trafficserver`
 
 You need to change `/MY-CONFIGS/trafficserver/` to your configuration path.
 
