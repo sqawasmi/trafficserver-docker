@@ -22,7 +22,7 @@ RUN cd /downloads/trafficserver && ./configure --prefix=/opt/trafficserver
 RUN cd /downloads/trafficserver && make
 RUN cd /downloads/trafficserver && make install
 #RUN rm -rf /opt/trafficserver/etc/trafficserver
-#ADD ./files/etc/trafficserver /etc/trafficserver
+ADD ./files/etc/trafficserver /etc/trafficserver
 RUN mv /opt/trafficserver/etc/trafficserver /etc/trafficserver
 RUN ln -sf /etc/trafficserver /opt/trafficserver/etc/trafficserver
 
