@@ -18,7 +18,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
         && cd /tmp/trafficserver && make \
         && cd /tmp/trafficserver && make install \
         && mv /opt/trafficserver/etc/trafficserver /etc/trafficserver \
-        && ln -sf /etc/trafficserver /opt/trafficserver/etc/trafficserver
+        && ln -sf /etc/trafficserver /opt/trafficserver/etc/trafficserver \
         && rm -rf /tmp/trafficserver
 
 #RUN rm -rf /opt/trafficserver/etc/trafficserver
