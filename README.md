@@ -5,7 +5,7 @@ This repository provides Dockerfile for [Apache TrafficServer][0]
 
 ### Status
 - Debian: wheezy
-- TrafficServer: 8.1.1
+- TrafficServer: 9.0.0
 
 Built images are uploaded to [index.docker.io][1]
 
