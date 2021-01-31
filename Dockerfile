@@ -22,7 +22,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
         && rm -rf /tmp/trafficserver
 
 #RUN rm -rf /opt/trafficserver/etc/trafficserver
-ADD ./files/etc/trafficserver /etc/trafficserver
+#ADD ./files/etc/trafficserver /etc/trafficserver
 
 EXPOSE 8080
 
