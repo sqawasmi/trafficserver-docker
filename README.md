@@ -5,7 +5,7 @@ This repository provides Dockerfile for [Apache TrafficServer][0]
 
 ### Status
 - Debian: buster
-- TrafficServer: 9.0.0
+- TrafficServer: 9.1.1
 
 Built images are uploaded to [index.docker.io][1]
 
