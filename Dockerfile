@@ -2,7 +2,7 @@ FROM debian:buster
 
 MAINTAINER  Shaker Qawasmi "http://github.com/sqawasmi"
 
-ARG TRAFFIC_SERVER_VERSION=9.0.0
+ARG TRAFFIC_SERVER_VERSION=9.1.1
 # Update the package repository
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
         && DEBIAN_FRONTEND=noninteractive apt-get upgrade -y \
